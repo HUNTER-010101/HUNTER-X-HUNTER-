@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10150f">
+<title>Hunter x Hunter | Guilda Free Fire</title>
+<style>
+:root{--bg:#0b100d;--panel:#151e18;--panel2:#1d2a20;--gold:#d7b45a;--green:#78c58a;--muted:#aab5aa;--line:#344638}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0%,#263b2b 0,transparent 35%),var(--bg);color:#f4f2e9;font-family:system-ui,Arial,sans-serif}
+header{padding:26px 18px 20px;text-align:center;border-bottom:1px solid var(--line);background:linear-gradient(135deg,#111a13dd,#1b281ddd)}
+.logo{font-size:12px;letter-spacing:5px;color:var(--gold);font-weight:800}.hero h1{font-size:clamp(30px,8vw,52px);margin:9px 0 4px;letter-spacing:2px}.hero p{margin:0;color:var(--muted)}
+nav{display:flex;gap:8px;overflow:auto;padding:12px 14px;position:sticky;top:0;background:#0b100df2;z-index:3;border-bottom:1px solid var(--line)}
+nav button{white-space:nowrap;background:var(--panel);color:#eee;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font-weight:700}
+nav button.active{background:var(--gold);color:#16170f;border-color:var(--gold)}
+main{max-width:950px;margin:auto;padding:18px 14px 60px}.section{display:none}.section.active{display:block}
+.card{background:linear-gradient(145deg,var(--panel),#111812);border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0;box-shadow:0 12px 30px #0003}
+h2{color:var(--gold);margin:0 0 12px;font-size:22px}h3{margin:0 0 8px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.stat{font-size:28px;color:var(--green);font-weight:800}.tag{display:inline-block;border:1px solid #526d54;color:#b8e2bd;border-radius:999px;padding:4px 9px;font-size:12px}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:11px 8px;border-bottom:1px solid var(--line)}th{color:var(--gold)}
+input,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0b120d;color:white;margin:6px 0 12px}
+.btn{border:0;border-radius:10px;background:var(--gold);color:#17170f;font-weight:800;padding:12px 16px;cursor:pointer}.btn.secondary{background:var(--panel2);color:#eee;border:1px solid var(--line)}
+.notice{border-left:3px solid var(--gold);padding:10px 13px;background:#22291d;border-radius:6px;color:#e9e2c8}
+footer{text-align:center;padding:25px;color:#839184;border-top:1px solid var(--line)}
+@media(max-width:520px){.card{padding:15px}th,td{font-size:13px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="logo">GUILDA • FREE FIRE</div>
+  <h1>HUNTER × HUNTER</h1>
+  <p>Força, estratégia e lealdade. Nossa caça começa aqui.</p>
+</header>
+<nav id="nav">
+  <button class="active" data-tab="inicio">Início</button>
+  <button data-tab="membros">Membros</button>
+  <button data-tab="ranking">Ranking</button>
+  <button data-tab="xtreinos">XTREINOS</button>
+  <button data-tab="premios">Prêmios</button>
+  <button data-tab="parcerias">Parcerias</button>
+  <button data-tab="admin">Admin</button>
+</nav>
+<main>
+<section class="section active" id="inicio">
+  <div class="card">
+    <span class="tag">RECRUTAMENTO • DISCIPLINA • EVOLUÇÃO</span>
+    <h2 style="margin-top:14px">Bem-vindo à guilda</h2>
+    <p>Entre para a equipe, participe dos XTREINOS e conquiste seu lugar no ranking. Aqui, cada partida conta.</p>
+    <div class="notice">“A verdadeira força nasce quando a equipe luta como uma só.”</div>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="muted">Membros cadastrados</div><div class="stat" id="memberCount">0</div></div>
+    <div class="card"><div class="muted">Próximo XTREINO</div><div class="stat" style="font-size:20px">A definir</div></div>
+    <div class="card"><div class="muted">Temporada</div><div class="stat" style="font-size:20px">01</div></div>
+  </div>
+  <div class="card"><h2>Como participar</h2><p>Fale com a administração da guilda para receber seu cadastro e as regras oficiais.</p></div>
+</section>
+<section class="section" id="membros">
+  <div class="card"><h2>Membros da guilda</h2><p class="muted">Área demonstrativa. A lista ainda não está conectada a um banco de dados.</p><div id="members"><p>Nenhum membro cadastrado ainda.</p></div></div>
+</section>
+<section class="section" id="ranking">
+  <div class="card"><h2>Ranking individual</h2><p class="muted">Pontuação de exemplo para organizar a competição.</p><table><thead><tr><th>#</th><th>Jogador</th><th>Pontos</th></tr></thead><tbody><tr><td>1</td><td>Aguardando jogadores</td><td>—</td></tr></tbody></table></div>
+</section>
+<section class="section" id="xtreinos">
+  <div class="card"><h2>Agenda de XTREINOS</h2><p>Os horários oficiais serão publicados pela administração.</p><div class="notice">Próximo horário: a definir</div></div>
+</section>
+<section class="section" id="premios">
+  <div class="card"><h2>Premiações</h2><div class="grid"><div><h3>1º lugar</h3><p class="muted">Prêmio a definir</p></div><div><h3>2º lugar</h3><p class="muted">Prêmio a definir</p></div><div><h3>Destaque da semana</h3><p class="muted">Prêmio a definir</p></div></div></div>
+</section>
+<section class="section" id="parcerias">
+  <div class="card"><h2>Parcerias</h2><p>Espaço reservado para guildas parceiras, criadores de conteúdo e apoiadores.</p><p class="muted">Para adicionar uma parceria, fale com a administração.</p></div>
+</section>
+<section class="section" id="admin">
+  <div class="card"><h2>Painel administrativo</h2><p class="muted">Esta versão é apenas a interface visual. O acesso ainda NÃO está protegido por login e não deve receber dados privados.</p><label for="adminName">Nome do administrador</label><input id="adminName" placeholder="Digite seu nome"><label for="adminMsg">Aviso para os membros</label><textarea id="adminMsg" rows="3" placeholder="Escreva um comunicado..."></textarea><button class="btn" id="previewBtn">Visualizar aviso</button><p id="preview" class="notice" hidden></p></div>
+</section>
+</main>
+<footer>HUNTER × HUNTER • GUILDA FREE FIRE<br><small>Versão inicial do site</small></footer>
+<script>
+document.querySelectorAll('nav button').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b===btn));
+ document.querySelectorAll('.section').forEach(s=>s.classList.toggle('active',s.id===btn.dataset.tab));
+}));
+document.getElementById('previewBtn').addEventListener('click',()=>{
+ const name=document.getElementById('adminName').value.trim()||'Admin';
+ const msg=document.getElementById('adminMsg').value.trim();
+ const p=document.getElementById('preview');p.hidden=false;
+ p.textContent=msg?name+': '+msg:'Digite um aviso antes de visualizar.';
+});
+</script>
+</body></html>
